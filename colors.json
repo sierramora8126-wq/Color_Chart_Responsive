@@ -1,0 +1,208 @@
+{
+  "sourceNote": "Color names/codes are transcribed from the supplied Allied color chart. HEX values are screen approximations derived from the printed chart; the chart itself states that actual color selection should be made from physical color chips.",
+  "systems": {
+    "SMP 26-gauge panels/trims": {
+      "label": "Silicone Modified Polyester (SMP) — 26 gauge",
+      "colors": [
+        {
+          "name": "Galvalume",
+          "code": "GM",
+          "hex": "#AEB6B8"
+        },
+        {
+          "name": "Solar White",
+          "code": "SW",
+          "hex": "#DCE2E4",
+          "note": "TS324 ONLY"
+        },
+        {
+          "name": "Arctic White",
+          "code": "BW",
+          "hex": "#E7E8E5",
+          "sr": 0.69,
+          "sri": 84
+        },
+        {
+          "name": "Polar White",
+          "code": "PW",
+          "hex": "#DCE0DA",
+          "sr": 0.64,
+          "sri": 77
+        },
+        {
+          "name": "Ash Grey",
+          "code": "AG",
+          "hex": "#B1AEAA",
+          "sr": 0.46,
+          "sri": 52
+        },
+        {
+          "name": "Saddle Tan",
+          "code": "ST",
+          "hex": "#B49A7F",
+          "sr": 0.47,
+          "sri": 53
+        },
+        {
+          "name": "Charcoal Grey",
+          "code": "CH",
+          "hex": "#5B5856",
+          "sr": 0.37,
+          "sri": 31
+        },
+        {
+          "name": "Burnished Slate",
+          "code": "BS",
+          "hex": "#4A433C",
+          "sr": 0.34,
+          "sri": 35
+        },
+        {
+          "name": "Hawaiian Blue",
+          "code": "HB",
+          "hex": "#4A7E89",
+          "sr": 0.31,
+          "sri": 31
+        },
+        {
+          "name": "Crimson Red",
+          "code": "CR",
+          "hex": "#B02F38",
+          "sr": 0.31,
+          "sri": 31
+        },
+        {
+          "name": "Fern Green",
+          "code": "FG",
+          "hex": "#344F3E",
+          "sr": 0.29,
+          "sri": 29
+        },
+        {
+          "name": "Black",
+          "code": "CB",
+          "hex": "#10161C",
+          "sr": 0.31,
+          "sri": 31
+        }
+      ]
+    },
+    "Fluropon 70% PVDF / Kynar — 24-gauge panels/trims": {
+      "label": "Fluropon 70% PVDF (Kynar) — 24 gauge",
+      "colors": [
+        {
+          "name": "Regal White",
+          "code": "RW",
+          "hex": "#D9DED7",
+          "sr": 0.85,
+          "sri": 83
+        },
+        {
+          "name": "Snow White",
+          "code": "KW",
+          "hex": "#CDD3D5",
+          "sr": 0.75,
+          "sri": 73
+        },
+        {
+          "name": "Almond",
+          "code": "KA",
+          "hex": "#C8C0AA",
+          "sr": 0.64,
+          "sri": 60
+        },
+        {
+          "name": "Brownstone",
+          "code": "KB",
+          "hex": "#A58E7E",
+          "sr": 0.4,
+          "sri": 40
+        },
+        {
+          "name": "Slate Gray",
+          "code": "KS",
+          "hex": "#777A77",
+          "sr": 0.15,
+          "sri": 15
+        },
+        {
+          "name": "Medium Bronze",
+          "code": "KM",
+          "hex": "#514A42",
+          "sr": 0.3,
+          "sri": 27
+        },
+        {
+          "name": "Regal Blue",
+          "code": "KG",
+          "hex": "#22657A",
+          "sr": 0.25,
+          "sri": 24
+        },
+        {
+          "name": "Regal Red",
+          "code": "KR",
+          "hex": "#9F2D35",
+          "sr": 0.49,
+          "sri": 48
+        },
+        {
+          "name": "Evergreen",
+          "code": "KC",
+          "hex": "#2E4B3B",
+          "sr": 0.24,
+          "sri": 22
+        }
+      ]
+    }
+  },
+  "primer": [
+    {
+      "name": "Grey Primer",
+      "code": "Standard Primer",
+      "hex": "#7F8A8F",
+      "group": "standard"
+    },
+    {
+      "name": "Allied Blue",
+      "code": "RAL5003",
+      "hex": "#2B3556",
+      "group": "finish"
+    },
+    {
+      "name": "White",
+      "code": "RAL 9010",
+      "hex": "#F1F0E8",
+      "group": "finish"
+    },
+    {
+      "name": "Grey",
+      "code": "RAL 7000",
+      "hex": "#78858B",
+      "group": "finish"
+    },
+    {
+      "name": "Pre-galvanized",
+      "code": "Secondary Material",
+      "hex": "#AEB4B4",
+      "group": "secondary"
+    }
+  ],
+  "defaults": {
+    "roof": "#4A433C",
+    "wall": "#D9DED7",
+    "wainscot": "#4A433C",
+    "corner": "#10161C",
+    "eave": "#10161C",
+    "rake": "#10161C",
+    "ridge": "#10161C",
+    "base": "#10161C",
+    "jamb": "#10161C",
+    "head": "#10161C",
+    "gutter": "#10161C",
+    "downspout": "#10161C",
+    "canopy": "#4A433C",
+    "parapet": "#4A433C",
+    "parapetback": "#D9DED7"
+  }
+}

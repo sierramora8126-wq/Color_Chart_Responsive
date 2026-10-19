@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Allied S&T Color Selector</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">ALLIED <span>S&T COLOR SELECTOR</span></div>
+    <div class="intro">Customer-facing metal building color visualization.</div>
+
+    <div class="section-title">CUSTOMER INFORMATION</div>
+    <div class="field"><label for="custName">Customer Name</label><input id="custName" type="text" autocomplete="off"></div>
+    <div class="field"><label for="custJob">Job Number</label><input id="custJob" type="text" autocomplete="off"></div>
+    <div class="field"><label for="custAddr">Address</label><textarea id="custAddr" rows="2"></textarea></div>
+    <div id="custNote" class="cust-note" hidden></div>
+
+    <div class="section-title">MODEL OPTIONS</div>
+    <label class="toggle"><input type="checkbox" id="canopyToggle"> <span>Canopy</span></label>
+    <label class="toggle"><input type="checkbox" id="leantoToggle"> <span>Lean-to</span></label>
+    <label class="toggle"><input type="checkbox" id="parapetToggle"> <span>Parapet (cap trim + back panel)</span></label>
+    <div class="field" id="parapetSideRow" style="display:none"><label for="parapetSide">Parapet location (viewed from front)</label><select id="parapetSide" class="system-select"><option value="left">Left sidewall</option><option value="right">Right sidewall</option><option value="both">Both sidewalls</option></select></div>
+    <label class="toggle"><input type="checkbox" id="wainToggle"> <span>Wainscot</span></label>
+    <label class="toggle sub" id="wainTrimRow"><input type="checkbox" id="wainTrimToggle" checked> <span>Wainscot trim (cap flashing)</span></label>
+    <div class="field"><label for="linerSelect">Liner Panel</label><select id="linerSelect" class="system-select"><option value="none">None</option><option value="wall">Wall</option><option value="roof">Roof</option><option value="both">Wall + Roof</option></select></div>
+    <div id="linerWallOpts" style="display:none">
+      <div class="field"><label for="linerHeight">Wall liner height</label><select id="linerHeight" class="system-select"><option value="full">Full height</option><option value="sel">Select height</option></select></div>
+      <div class="field" id="linerHeightValRow" style="display:none"><label for="linerHeightVal">Liner height (ft)</label><select id="linerHeightVal" class="system-select"><option value="4">4 ft</option><option value="6">6 ft</option><option value="8" selected>8 ft</option><option value="10">10 ft</option><option value="12">12 ft</option><option value="14">14 ft</option></select></div>
+      <label class="toggle sub" id="linerBaseRow" style="display:none"><input type="checkbox" id="linerBaseToggle" checked> <span>Base trim liner</span></label>
+      <label class="toggle sub" id="linerCapRow" style="display:none"><input type="checkbox" id="linerCapToggle" checked> <span>Cap trim liner</span></label>
+    </div>
+    <label class="toggle" id="cutRow" style="display:none"><input type="checkbox" id="cutToggle" checked> <span>Side cutaway (see liner)</span></label>
+
+    <div class="section-title">COLOR SYSTEM</div>
+    <select id="systemSelect" class="system-select"></select>
+    <div id="sourceNote" class="source-note"></div>
+    <div class="section-title">BUILDING COLORS</div>
+    <div id="controls"></div>
+    <label class="toggle"><input type="checkbox" id="labelsToggle" checked> <span>Show component callouts</span></label>
+    <div class="buttons">
+      <button id="reset">RESET COLORS</button>
+      <button id="front">FRONT VIEW</button>
+      <button id="iso">ISOMETRIC</button>
+      <button id="side">SIDE VIEW</button>
+    </div>
+    <div class="footer-note"><b>Important:</b> Screen colors are visual approximations. Final customer selection should be confirmed with physical color chips.</div>
+    <div class="sign-bar"><button id="signPrint">SIGN AND PRINT</button></div>
+  </aside>
+  <main class="viewer">
+    <canvas id="canvas"></canvas>
+    <div class="top-card"><b>Customer Color Preview</b><br><span>Select a material color on the left.</span></div>
+    <div class="view-switch" role="group" aria-label="Camera view"><button type="button" data-view="front">Front</button><button type="button" data-view="iso" class="on">Iso</button><button type="button" data-view="side">Side</button></div>
+    <div class="view-badge"><span class="hint-mouse">Drag to orbit · wheel to zoom · right-drag to pan · click a part to find its color</span><span class="hint-touch">Drag to orbit · pinch to zoom · tap a part to find its color</span></div>
+  </main>
+</div>
+
+<div class="modal" id="signModal" hidden>
+  <div class="modal-card">
+    <h3>Customer Signature</h3>
+    <p>By signing, the customer confirms the color selections shown in this document. Final color selection should be confirmed with physical color chips.</p>
+    <div class="sig-wrap"><canvas id="sigPad"></canvas><span class="sig-x">&times;</span></div>
+    <div id="signError" class="modal-error"></div>
+    <div class="modal-actions">
+      <button id="sigClear" class="ghost">CLEAR</button>
+      <button id="sigCancel" class="ghost">CANCEL</button>
+      <button id="sigConfirm">SIGN &amp; PRINT</button>
+    </div>
+  </div>
+</div>
+
+<div id="printSheet"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
